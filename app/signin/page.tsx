@@ -6,7 +6,7 @@ import React, { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
-export default function Signup() {
+export default function Signin() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");

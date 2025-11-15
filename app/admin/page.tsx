@@ -12,7 +12,7 @@ import axios from "axios";
 const schema = z.object({ name: z.string().min(1, "Name is required!") });
 
 
-export default function Signup() {
+export default function Admin() {
     const [email, setEmail] = React.useState('');
     const [refCode, setRefCode] = React.useState('');
     // const form = useForm({
