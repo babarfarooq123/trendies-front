@@ -10,7 +10,8 @@ export async function createJob(formData: FormData) {
     const email = formData.get("email");
     const refCode = formData.get("refCode") as string | null;
 
-    const res = await axios.post('http://localhost:3000/send-invite', {
+    // const res = await axios.post('http://localhost:3000/send-invite', {
+    const res = await axios.post('https://trendies-back-production.up.railway.app/send-invite', {
         email,
         refCode: refCode ? parseInt(refCode) : null
     });

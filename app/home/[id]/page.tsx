@@ -25,7 +25,8 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
 
     async function getProducts() {
         try {
-            const res = await axios.get('http://localhost:3000/get-single-products', {
+            // const res = await axios.get('http://localhost:3000/get-single-products', {
+            const res = await axios.get('https://trendies-back-production.up.railway.app/get-single-products', {
                 params: { id: unwrappedParams?.id }
             });
             if (res.data?.message == "Product retrieved successfully") {
@@ -37,7 +38,8 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
     }
 
     useEffect(() => {
-        const newSocket = io("http://localhost:3000");
+        // const newSocket = io("http://localhost:3000");
+        const newSocket = io("https://trendies-back-production.up.railway.app");
         setSocket(newSocket);
 
         getProducts();        

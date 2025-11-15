@@ -34,7 +34,8 @@ export default function Signup() {
         setError("");
         startTransition(async () => {
             const res = await axios({
-                url: "http://localhost:3000/signup",
+                // url: "http://localhost:3000/signup",
+                url: "https://trendies-back-production.up.railway.app/signup",
                 method: "PUT",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 data: { 

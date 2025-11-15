@@ -18,7 +18,8 @@ export default function Signup() {
     setError("");
     startTransition(async () => {
       const res = await axios({
-        url: "http://localhost:3000/signin",
+        // url: "http://localhost:3000/signin",
+        url: "https://trendies-back-production.up.railway.app/signin",
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         data: new URLSearchParams({ email, password }).toString(),

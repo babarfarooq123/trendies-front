@@ -42,7 +42,8 @@ export default function Home() {
 
     async function getProducts() {
         try {
-            const res = await axios.get('http://localhost:3000/get-products', {
+            // const res = await axios.get('http://localhost:3000/get-products', {
+            const res = await axios.get('https://trendies-back-production.up.railway.app/get-products', {
                 params: { email: window.localStorage.getItem("email") }
             });
             if (res.data?.message == "Products retrieved successfully") {

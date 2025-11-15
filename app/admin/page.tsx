@@ -27,7 +27,8 @@ export default function Signup() {
 
     async function getUserInvities() {
         try {
-            const res = await axios.get('http://localhost:3000/get-invities');
+            // const res = await axios.get('http://localhost:3000/get-invities');
+            const res = await axios.get('https://trendies-back-production.up.railway.app/get-invities');
             if (res.data?.message == "Users retrieved successfully") {
                 setUserInvities(res.data.users);
             }
@@ -47,7 +48,8 @@ export default function Signup() {
             // const email = formData.get("email");
             // const refCode = formData.get("refCode") as string | null;
 
-            const res = await axios.post('http://localhost:3000/send-invite', {
+            // const res = await axios.post('http://localhost:3000/send-invite', {
+            const res = await axios.post('https://trendies-back-production.up.railway.app/send-invite', {
                 email,
                 refCode: refCode ? parseInt(refCode) : null
             });
